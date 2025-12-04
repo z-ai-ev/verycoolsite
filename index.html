@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nieuwjaarscadeau Wensen & Inspiratie</title>
+    <title>Nieuwjaar Wensen - Data Core | Z-AI-EV Project</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Montserrat:wght=400;700&display=swap" rel="stylesheet">
+</head>
 <body>
 
     <header>
         <nav>
-            <h1>Familie Nieuwjaar</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#inspiratie">Inspiratie</a></li>
-                <li><a href="#wensen">Mijn Wens</a></li>
+            <h1>// WENSEN.CORE</h1>
+            <ul class="nav-links">
+                <li><a href="#home">/START</a></li>
+                <li><a href="#inspiratie">/DATA_FLOW</a></li>
+                <li><a href="#wensen">/INPUT_WISH</a></li>
             </ul>
         </nav>
     </header>
@@ -22,54 +23,64 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h2>Gelukkig Nieuwjaar!</h2>
-                <p>Welkom op onze speciale familiepagina voor cadeau-inspiratie en wensen.</p>
-                <a href="#inspiratie" class="button primary">Bekijk Inspiratie</a>
+                <h2>[ N.Y. WISH LOGISTICS - ONLINE ]</h2>
+                <p>Welkom op het centrale distributieplatform voor Nieuwjaarscadeau-inspiratie. Initieer de dataflow.</p>
+                <a href="#inspiratie" class="button primary">INITIEER >></a>
             </div>
         </section>
 
-        <section id="inspiratie" class="cadeau-grid">
-            <h3>🎁 Cadeau-Inspiratie 🎁</h3>
-            <p class="intro-text">Hier zijn enkele ideeën om je op weg te helpen met het zoeken naar het perfecte cadeau voor een familielid:</p>
+        <section id="inspiratie" class="cadeau-grid-container">
+            <h3>:: CADEAU DATA FLOWS [ v1.0 ]</h3>
             
-            <div class="card">
-                <h4>Ervaringen</h4>
-                <p>Tijd samen is het mooiste cadeau! Denk aan een dagje wellness, een etentje, of tickets voor een concert of theater.</p>
-                <a href="#" class="button secondary">Lees Meer</a>
-            </div>
+            <div class="cadeau-grid">
+                <div class="card">
+                    <h4>MODULE 01: EXPERIENCE DATA</h4>
+                    <p>Fysieke aanwezigheid en gedeelde momenten. Geef een event, workshop of een reis-voucher. Focus op herinneringen boven materie.</p>
+                    <a href="#" class="button secondary">ANALYSE >></a>
+                </div>
 
-            <div class="card">
-                <h4>Duurzaam & Groen</h4>
-                <p>Cadeaus die lang meegaan of goed zijn voor de planeet, zoals herbruikbare artikelen, een boom donatie, of een lokale delicatesse mand.</p>
-                <a href="#" class="button secondary">Bekijk Opties</a>
-            </div>
+                <div class="card">
+                    <h4>MODULE 02: SUSTAINABILITY INDEX</h4>
+                    <p>Ethische en duurzame acquisities. Producten met een lage ecologische impact, lokale ambachten, of een donatie in naam van de ontvanger.</p>
+                    <a href="#" class="button secondary">AUDIT DATA >></a>
+                </div>
 
-            <div class="card">
-                <h4>Hobby's & Passies</h4>
-                <p>Wat doet de ontvanger graag? Boeken, knutselspullen, gereedschap, of een abonnement op een tijdschrift gerelateerd aan hun hobby.</p>
-                <a href="#" class="button secondary">Meer Ideeën</a>
+                <div class="card">
+                    <h4>MODULE 03: HARDWARE UPGRADE</h4>
+                    <p>Upgrade van een essentieel item in het dagelijks leven. Denk aan high-end tools, tech gadgets, of een luxe abonnement.</p>
+                    <a href="#" class="button secondary">ACCESS FILE >></a>
+                </div>
             </div>
         </section>
 
-        <section id="wensen" class="wensen-form">
-            <h3>💌 Plaats Je Eigen Wens 💌</h3>
-            <p>Laat de familie weten wat je leuk vindt, of waar je nog behoefte aan hebt.</p>
+        <section id="wensen" class="wensen-form-container">
+            <h3>:: WENS INPUT [ PROTOCOL ACTIVE ]</h3>
+            <p class="intro-text">Verstuur jouw eigen wens. De data wordt versleuteld en discreet verwerkt in de cadeau-logistiek.</p>
             
-            <form>
-                <label for="naam">Jouw Naam:</label>
-                <input type="text" id="naam" name="naam" required>
+            <form action="https://formsubmit.co/[JOUW E-MAILADRES]" method="POST" class="wunsch-form">
                 
-                <label for="wens">Je Cadeauwens:</label>
-                <textarea id="wens" name="wens" rows="4" placeholder="Bijv. Een lekker warm deken, of een bon voor een boekwinkel."></textarea>
+                <input type="hidden" name="_subject" value="Nieuwe Cadeauwens van Familielid - NIEUWJAAR DATA ENTRY">
                 
-                <button type="submit" class="button primary disabled" disabled>Verzenden (Functie komt later)</button>
+                <label for="naam">Gebruiker ID (Naam):</label>
+                <input type="text" id="naam" name="Naam" required placeholder="Voer uw naam in">
+                
+                <label for="email">Contact E-mail (Optioneel):</label>
+                <input type="email" id="email" name="Email" placeholder="Voor verificatie/vragen">
+                
+                <label for="wens">Wensspecificatie:</label>
+                <textarea id="wens" name="Wens" rows="5" placeholder="Beschrijf uw wens (max. 500 tekens)..."></textarea>
+                
+                <button type="submit" class="button primary submit-btn">VERZEND DATA >> </button>
+                
+                <input type="hidden" name="_next" value="[JOUW WEBSITE LINK]?status=success"> 
+                
             </form>
-            <p class="note">**Let op:** Dit is een *statisch* formulier en verstuurt op dit moment nog geen gegevens. Hiervoor is een backend-systeem nodig.</p>
+            <p class="note">DATA INPUT beveiligd door FormSubmit. Activeer via e-mail na eerste test.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Familie Wensen [Jaar]. Alle rechten voorbehouden.</p>
+        <p>CONSOLE LOG: Z-AI-EV PROJECT V.2.0 | ACCESS GRANTED</p>
     </footer>
 
 </body>
