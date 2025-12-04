@@ -1,14 +1,17 @@
-/* Globale Stijlen en Reset */
+/* Globale Stijlen en Kleurenpalet (Prism Flux Inspired) */
 :root {
-    --primary-color: #004d40; /* Donkergroen/Teal voor Kerst/Winter gevoel */
-    --secondary-color: #ffc107; /* Goud/Geel voor een feestelijk accent */
-    --background-light: #f4f4f4;
-    --text-color: #333;
-    --white: #ffffff;
-    --spacing-large: 40px;
-    --spacing-medium: 20px;
+    --background-dark: #111111; /* Diep donkergrijze basis */
+    --surface-dark: #1F1F1F;    /* Achtergrond voor elementen */
+    --accent-primary: #00FFFF;  /* Cyan/Aqua Glow */
+    --accent-secondary: #FF00FF; /* Magenta/Fuchsia Contrast */
+    --text-light: #F0F0F0;      /* Lichte tekstkleur */
+    --text-muted: #AAAAAA;      /* Gedempte tekst */
+    --border-color: #333333;    /* Subtiele lijnen */
+    --font-mono: 'Space Mono', monospace; /* Monospace voor tech-look */
+    --font-sans: 'Montserrat', sans-serif;
 }
 
+/* Algemene Reset en Achtergrond */
 * {
     margin: 0;
     padding: 0;
@@ -16,18 +19,18 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: var(--font-sans);
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-light);
+    color: var(--text-light);
+    background-color: var(--background-dark);
 }
 
 /* Header en Navigatie */
 header {
-    background: var(--primary-color);
-    color: var(--white);
-    padding: var(--spacing-medium) 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--surface-dark);
+    padding: 18px 0;
+    border-bottom: 2px solid var(--accent-primary);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
 }
 
 nav {
@@ -36,218 +39,247 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--spacing-medium);
+    padding: 0 20px;
 }
 
 nav h1 {
+    font-family: var(--font-mono);
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    color: var(--accent-primary);
+    text-shadow: 0 0 5px var(--accent-primary);
 }
 
-nav ul {
+.nav-links {
     list-style: none;
     display: flex;
 }
 
-nav ul li a {
-    color: var(--white);
+.nav-links li a {
+    color: var(--text-light);
     text-decoration: none;
     padding: 0 15px;
-    transition: color 0.3s;
+    font-family: var(--font-mono);
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
-nav ul li a:hover {
-    color: var(--secondary-color);
+.nav-links li a:hover {
+    color: var(--accent-secondary);
+    text-shadow: 0 0 5px var(--accent-secondary);
 }
 
 /* Hero Sectie */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/1200/500?random=1'); /* Placeholder afbeelding */
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.8)), url('https://picsum.photos/1400/600?random=3');
     background-size: cover;
     background-position: center;
-    color: var(--white);
     text-align: center;
-    padding: 100px 20px;
+    padding: 150px 20px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .hero-content h2 {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-medium);
-    color: var(--secondary-color);
+    font-family: var(--font-mono);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-primary);
+    text-shadow: 0 0 8px var(--accent-primary);
+    letter-spacing: 2px;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: var(--spacing-large);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: var(--text-muted);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    transition: all 0.3s ease;
+    border: 2px solid;
+    cursor: pointer;
+}
+
+.primary {
+    background-color: var(--accent-primary);
+    color: var(--background-dark);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.primary:hover {
+    background-color: transparent;
+    color: var(--accent-primary);
+    box-shadow: 0 0 15px var(--accent-primary);
+}
+
+.secondary {
+    background-color: transparent;
+    color: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+}
+
+.secondary:hover {
+    background-color: var(--accent-secondary);
+    color: var(--background-dark);
+    box-shadow: 0 0 10px var(--accent-secondary);
 }
 
 /* Algemene Secties */
 section {
-    padding: var(--spacing-large) var(--spacing-medium);
+    padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 section h3 {
     text-align: center;
+    font-family: var(--font-mono);
     font-size: 2rem;
-    margin-bottom: var(--spacing-medium);
-    color: var(--primary-color);
+    margin-bottom: 40px;
+    color: var(--accent-secondary);
+    text-shadow: 0 0 5px var(--accent-secondary);
 }
 
 .intro-text {
     text-align: center;
-    margin-bottom: var(--spacing-large);
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1rem;
+    color: var(--text-muted);
 }
 
-/* Cadeau Grid (Inspiratie) */
-.cadeau-grid {
-    background-color: var(--white);
+/* Cadeau Grid (Kaarten) */
+.cadeau-grid-container {
+    background-color: var(--background-dark);
 }
 
 .cadeau-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-medium);
+    gap: 30px;
 }
 
 .card {
-    background: var(--background-light);
+    background: var(--surface-dark);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: var(--spacing-medium);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s;
+    text-align: center;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
 }
 
 .card h4 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 5px;
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    color: var(--accent-primary);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
-/* Buttons */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 15px;
-    transition: background-color 0.3s;
+.card p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
 }
 
-.primary {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border: none;
-}
-
-.primary:hover {
-    background-color: #ffd740; /* Iets lichtere goudkleur */
-}
-
-.secondary {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: 1px solid var(--primary-color);
-}
-
-.secondary:hover {
-    background-color: #00695c; /* Iets donkerder groen */
-}
-
-.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
 
 /* Wensen Formulier */
-.wensen-form {
-    padding: var(--spacing-large);
-    background-color: var(--background-light);
+.wensen-form-container {
+    padding-bottom: 100px;
 }
 
-.wensen-form form {
-    max-width: 600px;
+.wunsch-form {
+    max-width: 650px;
     margin: 0 auto;
-    padding: var(--spacing-medium);
-    background: var(--white);
+    padding: 40px;
+    background: var(--surface-dark);
+    border: 2px solid var(--accent-secondary);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
 }
 
-.wensen-form label {
+.wunsch-form label {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.wensen-form input[type="text"], 
-.wensen-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.wensen-form button[type="submit"] {
-    display: block;
-    width: 100%;
     margin-top: 20px;
-    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--accent-secondary);
+    font-family: var(--font-mono);
 }
 
-.wensen-form .note {
+.wunsch-form input[type="text"], 
+.wunsch-form input[type="email"], 
+.wunsch-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #0A0A0A; /* Zwarte inputvelden */
+    color: var(--text-light);
+    transition: border-color 0.3s;
+}
+
+.wunsch-form input:focus, 
+.wunsch-form textarea:focus {
+    border-color: var(--accent-primary);
+    outline: none;
+    box-shadow: 0 0 5px var(--accent-primary);
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    font-size: 1.1rem;
+    padding: 15px;
+}
+
+.wensen-form-container .note {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 25px;
     font-style: italic;
-    font-size: 0.9em;
-    color: #888;
+    font-size: 0.8em;
+    color: var(--text-muted);
 }
 
 /* Footer */
 footer {
-    background: var(--primary-color);
-    color: var(--white);
+    background: var(--surface-dark);
+    color: var(--text-muted);
     text-align: center;
-    padding: 15px 0;
+    padding: 20px 0;
     font-size: 0.9rem;
+    border-top: 2px solid var(--accent-secondary);
+    font-family: var(--font-mono);
+    letter-spacing: 1px;
 }
 
-/* Media Queries (Responsiviteit) */
+/* Media Queries */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        text-align: center;
+        gap: 15px;
     }
-
-    nav h1 {
-        margin-bottom: 10px;
+    .hero {
+        padding: 100px 20px;
     }
-    
-    nav ul {
-        padding: 0;
-    }
-
-    nav ul li a {
-        padding: 0 8px;
-    }
-
     .hero-content h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
-
-    .cadeau-grid {
-        grid-template-columns: 1fr; /* Alles onder elkaar op mobiel */
+    .nav-links {
+        justify-content: center;
     }
 }
