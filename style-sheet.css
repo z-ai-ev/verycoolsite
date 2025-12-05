@@ -588,7 +588,7 @@ body::after {
 
 /* NEW: Prism Philosophy Section */
 .philosophy-section {
-	padding: 120px 30px;
+	padding: 20px 30px 120px;
 	background: linear-gradient(180deg,
 			var(--primary-black) 0%,
 			rgba(153, 69, 255, 0.02) 50%,
@@ -1614,4 +1614,5 @@ a.info-item {
 		text-align: center;
 	}
 }
+
 
