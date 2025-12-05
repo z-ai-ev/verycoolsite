@@ -408,7 +408,7 @@
                 } else {
                     element.textContent = current;
                 }
-            }, 250);
+            }, 8);
         }
 
         // Intersection Observer for stats animation
@@ -468,5 +468,6 @@
                 parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
         });
+
 
 
