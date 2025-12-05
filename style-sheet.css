@@ -374,6 +374,7 @@ body::after {
 	perspective: 1200px;
 	position: relative;
 	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 .carousel {
@@ -1614,6 +1615,7 @@ a.info-item {
 		text-align: center;
 	}
 }
+
 
 
 
