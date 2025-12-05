@@ -398,19 +398,17 @@
         // Animated counter for stats
         function animateCounter(element) {
             const target = parseInt(element.dataset.target);
-            const duration = 2000;
-            const step = target / (duration / 16);
             let current = 0;
             
             const counter = setInterval(() => {
-                current += step;
+                current++;
                 if (current >= target) {
                     element.textContent = target;
                     clearInterval(counter);
                 } else {
-                    element.textContent = Math.floor(current);
+                    element.textContent = current;
                 }
-            }, 16);
+            }, 250);
         }
 
         // Intersection Observer for stats animation
@@ -470,4 +468,5 @@
                 parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
         });
+
 
