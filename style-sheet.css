@@ -165,7 +165,7 @@ body::after {
 
 /* Navigation Header */
 .header {
-	position: fixed;
+	position: flex;
 	top: 0;
 	width: 100%;
 	background: linear-gradient(180deg,
@@ -361,7 +361,7 @@ body::after {
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	padding: 120px 20px 80px;
+	padding: 120px 20px 160px;
 	background: radial-gradient(ellipse at center,
 			rgba(153, 69, 255, 0.1) 0%,
 			transparent 50%);
@@ -1614,5 +1614,6 @@ a.info-item {
 		text-align: center;
 	}
 }
+
 
 
