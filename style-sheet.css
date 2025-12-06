@@ -40,7 +40,7 @@ body {
 /* Carbon Fiber Background Pattern */
 body::before {
 	content: '';
-	position: fixed;
+	position: flex;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -68,7 +68,7 @@ body::before {
 /* Animated Grid Overlay */
 body::after {
 	content: '';
-	position: fixed;
+	position: flex;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -94,7 +94,7 @@ body::after {
 
 /* Loading Screen */
 .loader {
-	position: fixed;
+	position: flex;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -1615,6 +1615,7 @@ a.info-item {
 		text-align: center;
 	}
 }
+
 
 
 
